@@ -1,0 +1,27 @@
+public class Main
+{
+	public static void main(String[] args) {
+ 		int que[] = {10,22,9,33,5,44};
+    // first we make a new empty array which size of the original array which is given as input
+ 		int ans[] = new int[que.length];
+
+    // here we always push the first element of the input array
+ 		ans[0] = que[0];
+
+      // now we run loop for comapring the element of array
+ 	    for(int i = 0;i<que.length-1;i++){
+	        if(ans[i] < que[i+1]){
+              // which element is less than the previous array we push it on answer array
+	            ans[i+1] = que[i+1];
+	        }
+ 	    }
+ 	    
+ 	    for(int i=0;i<ans.length;i++){
+ 	        if(ans[i]!= 0){
+          // here we print the answer array
+ 	        System.out.print(ans[i]+" ");
+ 	        }
+ 	    }
+        
+	}
+ }
